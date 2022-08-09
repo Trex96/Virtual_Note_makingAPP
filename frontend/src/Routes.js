@@ -8,6 +8,7 @@ import NewNote from "./containers/NewNote";
 import Notes from "./containers/Notes";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
+import ResetPassword from "./containers/ResetPassword";
 
 export default function Links() {
   return (
@@ -28,6 +29,16 @@ export default function Links() {
             </UnauthenticatedRoute>
           }
         />
+
+          <Route
+            path="/login/reset"
+            element={
+              <UnauthenticatedRoute>
+                <ResetPassword />
+              </UnauthenticatedRoute>
+            }
+          />
+
         <Route
           path="/notes/new"
           element={
