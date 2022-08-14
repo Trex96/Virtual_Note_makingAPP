@@ -4,7 +4,7 @@ const config = {
 
   s3: {
     REGION: "ap-south-1",
-    BUCKET: process.env.REACT_APP_BUCKET,
+    BUCKET: "virtualnotes-notes-storages-uploadsbucketc4b27cc7-dyeplx3tgwsu",
   },
   apiGateway: {
     REGION: "ap-south-1",
