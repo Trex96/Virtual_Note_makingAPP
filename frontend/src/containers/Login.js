@@ -35,10 +35,35 @@ export default function Login() {
       setIsLoading(false);
     }
   }
+  const signIn = async () =>{ 
+    await Auth.federatedSignIn({
+      provider: "Facebook",
+    });}
+    const signIng = async () =>{ 
+      await Auth.federatedSignIn({
+        provider: "Google",
+      });}
+    
 
   return (
     <div className="Login">
       <Form onSubmit={handleSubmit}>
+        
+      <LoaderButton
+          block="true"
+          size="lg"
+          onClick={signIn}
+        >
+          Facebook  
+        </LoaderButton>
+
+        <LoaderButton
+          block="true"
+          size="lg"
+          onClick={signIng}
+        >
+          Google  
+        </LoaderButton>
         <Form.Group size="lg" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control
@@ -70,3 +95,6 @@ export default function Login() {
     </div>
   );
 }
+
+
+// https://virtual-note.auth.ap-south-1.amazoncognito.com/oauth2/idpresponse
